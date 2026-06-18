@@ -12,7 +12,12 @@ export default function Home() {
 
   function startGame(gameId: string) {
     const code = makeRoomCode();
-    router.push(`/room/${code}?game=${gameId}`);
+    const game = GAMES.find((g) => g.id === gameId);
+    const name = game?.name ?? "Your game";
+    toast.success(`${name} is live! Starting your room…`);
+    setTimeout(() => {
+      router.push(`/room/${code}?game=${gameId}`);
+    }, 800);
   }
 
   function joinRoom(e: React.FormEvent) {
