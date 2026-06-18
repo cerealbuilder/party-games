@@ -1,7 +1,7 @@
 // Random Picker / Wheel.
 // Every participant is a wheel segment. A spin is decided on the server so all
 // clients animate to the exact same final rotation and see the same winner.
-const SPIN_DURATION_MS = 4500;
+const SPIN_DURATION_MS = 2000;
 const BASE_SPINS = 5;
 
 function init(room) {
