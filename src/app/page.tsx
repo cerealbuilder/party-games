@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { GAMES } from "@/games/catalog";
 import { makeRoomCode } from "@/lib/code";
 
